@@ -1,0 +1,16 @@
+
+% camera_man
+image_path = which('cameraman.tif'); 
+foldingRate=0.75;
+epsi_vec=[10, 12, 14, ]*foldingRate; %epsilon
+|S|=2200;
+|S_{dash}|=530;
+compression_factor=0.4; 
+
+% boat
+img1=imread('boat.png');
+foldingRate=0.75;
+epsi_vec=[10, 12, 14, ]*foldingRate; %epsilon
+|S|=3200;
+|S_{dash}|=530;
+compression_factor=0.2; 
