@@ -1,6 +1,32 @@
-image_path = which('cameraman.tif'); 
-foldingRate=0.75;
-epsi_vec=[10, 12, 14, ]*foldingRate; %epsilon
-|S|=2200;
-|S_{dash}|=530;
-compression_factor=0.4;
+% normalized data
+T_stop=200;
+file='sub01_hi'; %
+path=['STEW Dataset\' file '.txt'];
+fileID = fopen(path,'r');
+formatSpec = '%f';
+for i=1:1:13
+   formatSpec=[formatSpec '%f']; 
+end
+sizex = [14 Inf];
+x = fscanf(fileID,formatSpec,sizex);
+
+% de-mean and normalize the data for each channel
+x_mean=mean(x,2);
+X1=x-x_mean;
+x_max=max(X1');
+x_min=min(X1');
+
+X_norm=(X1-x_min')./repmat(x_max'-x_min',1,size(x,2));
+X_1=X_norm(:,1:T_stop); 
+
+file='sub20_hi' to obtain X_2
+file='sub36_hi' to obtain X_3
+
+% graph signal
+X=[X_1;X_2;X_3];
+
+foldingRate=0.6;
+epsi_vec=[1, 3 ]*foldingRate; %epsilon
+|S|=8;
+|S_{dash}|=15;
+
