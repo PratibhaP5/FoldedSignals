@@ -1,0 +1,5 @@
+foldingRate=0.75;
+epsi_vec=[20, 150 ]*foldingRate; %epsilon
+|S|=80;
+|S_{dash}|=50;
+N=1024 %N-point DFT
