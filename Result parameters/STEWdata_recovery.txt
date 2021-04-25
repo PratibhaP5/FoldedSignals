@@ -1,0 +1,6 @@
+image_path = which('cameraman.tif'); 
+foldingRate=0.75;
+epsi_vec=[10, 12, 14, ]*foldingRate; %epsilon
+|S|=2200;
+|S_{dash}|=530;
+compression_factor=0.4;
