@@ -1,1 +1,5 @@
-N
+img1=imread('medical.png');
+foldingRate=0.7;
+epsi_vec==[16 18 20 22 24 26 28 30]*foldingRate; %epsilon
+|S|=2000;
+compression_factor=0.2; 
