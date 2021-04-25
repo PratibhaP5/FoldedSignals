@@ -1,4 +1,4 @@
-% form data
+% data
 T_stop=200;
 file='sub01_hi'; %
 path=['STEW Dataset\' file '.txt'];
